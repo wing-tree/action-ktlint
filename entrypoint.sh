@@ -54,11 +54,5 @@ fi
 
 echo "--reporter: $CUSTOM_RULE_PATH $RELATIVE $ANDROID $BASELINE $INPUT_FILE_GLOB"
 
-ktlint --reporter=checkstyle $CUSTOM_RULE_PATH $RELATIVE $ANDROID $BASELINE $INPUT_FILE_GLOB |
-  reviewdog -f=checkstyle \
-    -name="${INPUT_NAME}" \
-    -reporter="${INPUT_REPORTER}" \
-    -level="${INPUT_LEVEL}" \
-    -filter-mode="${INPUT_FILTER_MODE}" \
-    -fail-on-error="${INPUT_FAIL_ON_ERROR}"
+ktlint --reporter=checkstyle $CUSTOM_RULE_PATH $RELATIVE $ANDROID $BASELINE $INPUT_FILE_GLOB
 
