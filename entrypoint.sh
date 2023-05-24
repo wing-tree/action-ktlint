@@ -28,7 +28,7 @@ if [ ! -z "$INPUT_BASELINE" ]; then
 fi
 
 if [ "$INPUT_CUSTOM_RULE_PATH" ]; then
-  export CUSTOM_RULE_PATH="--artifact=${INPUT_CUSTOM_RULE_PATH}"
+  export CUSTOM_RULE_PATH="--ruleset=${INPUT_CUSTOM_RULE_PATH}"
 fi
 
 cd "$GITHUB_WORKSPACE"
