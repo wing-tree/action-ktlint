@@ -19,7 +19,7 @@ else
     mv ktlint /usr/local/bin/
 fi
 
-if [ "$INPUT_RELATIVE" = false ]; then
+if [ "$INPUT_RELATIVE" = true ]; then
   export RELATIVE=--relative
 fi
 
