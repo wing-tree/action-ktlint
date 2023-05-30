@@ -54,8 +54,7 @@ fi
 
 echo "--reporter: $CUSTOM_RULE_PATH $RELATIVE $ANDROID $BASELINE $INPUT_FILE_GLOB"
 
-ktlint --disabled_rules=standard
-ktlint --reporter=checkstyle $CUSTOM_RULE_PATH $RELATIVE $ANDROID $BASELINE $INPUT_FILE_GLOB |
+ktlint --reporter=checkstyle $CUSTOM_RULE_PATH $RELATIVE $ANDROID $BASELINE $INPUT_FILE_GLOB --disabled_rules=standard |
   reviewdog -f=checkstyle \
     -name="${INPUT_NAME}" \
     -reporter="${INPUT_REPORTER}" \
